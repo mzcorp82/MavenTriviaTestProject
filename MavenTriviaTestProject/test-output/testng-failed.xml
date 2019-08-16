@@ -5,17 +5,34 @@
     <classes>
       <class name="com.triviagame.TestCases.BoundryValuesTest">
         <methods>
-          <include name="SqSecondQuestionGameBvMult5"/>
-          <include name="FqFirstQuestionGameBvMult5"/>
-          <include name="FqSecondAnswerGameBvMult5"/>
-          <include name="SqForthAnswerGameBvMult5"/>
+          <include name="TqThirdQuestionGameBvMult40"/>
+          <include name="TqThirdAnswerGameBvMult5"/>
+          <include name="SqForthAnswerGameBvMult40"/>
+          <include name="FqForthAnswerGameBvMult40"/>
+          <include name="TqThirdQuestionGameBvMult20"/>
+          <include name="SqThirdAnswerGameBvMult40"/>
+          <include name="TqSecondAnswerGameBvMult10"/>
+          <include name="TqForthAnswerGameBvMult5"/>
+          <include name="TqSecondAnswerGameBvMult5"/>
+          <include name="TqForthAnswerGameBvMult10"/>
+          <include name="TqThirdQuestionGameBvMult5"/>
+          <include name="TqThirdAnswerGameBvMult40"/>
+          <include name="TqThirdAnswerGameBvMult20"/>
+          <include name="TqThirdQuestionGameBvMult10"/>
+          <include name="SqSecondAnswerGameBvMult40"/>
+          <include name="TqSecondAnswerGameBvMult20"/>
+          <include name="FqThirdAnswerGameBvMult40"/>
+          <include name="TqFirstAnswerGameBvMult40"/>
+          <include name="TqSecondAnswerGameBvMult40"/>
+          <include name="TqForthAnswerGameBvMult20"/>
+          <include name="TqForthAnswerGameBvMult40"/>
+          <include name="afretAllTest"/>
           <include name="startBrowser"/>
-          <include name="FqForthAnswerGameBvMult5"/>
-          <include name="SqThirdAnswerGameBvMult5"/>
-          <include name="FqThirdAnswerGameBvMult5"/>
-          <include name="SqFirstAnswerGameBvMult5"/>
-          <include name="ThirdQuestionGameBvMult5"/>
-          <include name="SqSecondAnswerGameBvMult5"/>
+          <include name="TqFirstAnswerGameBvMult5"/>
+          <include name="SqFirstAnswerGameBvMult40"/>
+          <include name="FqFirstAnswerGameBvMult40"/>
+          <include name="TqThirdAnswerGameBvMult10"/>
+          <include name="FqSecondAnswerGameBvMult40"/>
         </methods>
       </class> <!-- com.triviagame.TestCases.BoundryValuesTest -->
     </classes>
