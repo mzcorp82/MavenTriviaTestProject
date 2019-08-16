@@ -464,5 +464,427 @@ public class BoundryValuesTest {
 			
 			assertEquals(true, driver.getPageSource().contains("You finished")==true);
 		}
+		
+		@Test
+		void FqFirstQuestionGameBvMult10() {
+		
+			QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+			GameButtons GB = new GameButtons(driver);
+			InGameChoices IGC = new InGameChoices(driver);
+
+
+
+			GB.clickStartButton();
+			QnA.typeTheQuestion("aaaaaaaaaa");
+			GB.clickNextButton();
+			QnA.typeFirstAnswer("a");
+			QnA.typeSecondAnswer("b");
+			QnA.typeThirdAnswer("c");
+			QnA.typeForthAnswer("d");
+			QnA.clickFirstRadioButton();
+			GB.clickNextButton();
+
+			assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+		}
+
+			@Test
+			void FqFirstAnswerGameBvMult10() {
+			
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+				
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("aaaaaaaaaa");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+		
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void FqSecondAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("bbbbbbbbbb");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+		
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void FqThirdAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("cccccccccc");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+		
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void FqForthAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("dddddddddd");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+			
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void SqSecondQuestionGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("bbbbbbbbbb");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void SqFirstAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("gggggggggg");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void SqSecondAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("bbbbbbbbbb");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void SqThirdAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("rrrrrrrrrr");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void SqForthAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("uuuuuuuuuu");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("Please type here your question")==true);
+			}
+			
+			@Test
+			void TqThirdQuestionGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("cccccccccc");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("w");
+				QnA.typeSecondAnswer("j");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("q");
+				QnA.clickThirdRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("You finished")==true);
+			}
+			
+			@Test
+			void TqFirstAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("c");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("wwwwwwwwww");
+				QnA.typeSecondAnswer("j");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("q");
+				QnA.clickThirdRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("You finished")==true);
+			}
+			
+			@Test
+			void TqSecondAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("c");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("w");
+				QnA.typeSecondAnswer("jjjjjjjjjj");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("q");
+				QnA.clickThirdRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("You finished")==true);
+			}
+			
+			@Test
+			void TqThirdAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("c");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("w");
+				QnA.typeSecondAnswer("j");
+				QnA.typeThirdAnswer("cccccccccc");
+				QnA.typeForthAnswer("q");
+				QnA.clickThirdRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("You finished")==true);
+			}
+			
+			@Test
+			void TqForthAnswerGameBvMult10() {
+				
+				QuestionsAndAnswers QnA = new QuestionsAndAnswers (driver);
+				GameButtons GB = new GameButtons(driver);
+				InGameChoices IGC = new InGameChoices(driver);
+		
+				GB.clickStartButton();
+				QnA.typeTheQuestion("a");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("a");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("d");
+				QnA.clickFirstRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				QnA.typeTheQuestion("c");
+				GB.clickNextButton();
+				QnA.typeFirstAnswer("w");
+				QnA.typeSecondAnswer("j");
+				QnA.typeThirdAnswer("c");
+				QnA.typeForthAnswer("qqqqqqqqqq");
+				QnA.clickThirdRadioButton();
+				GB.clickNextButton();
+				
+				assertEquals(true, driver.getPageSource().contains("You finished")==true);
+			}
 	
 }
