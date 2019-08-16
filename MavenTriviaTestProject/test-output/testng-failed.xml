@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.triviagame.TestCases.BoundryValuesTest">
+        <methods>
+          <include name="SqSecondQuestionGameBvMult5"/>
+          <include name="FqFirstQuestionGameBvMult5"/>
+          <include name="FqSecondAnswerGameBvMult5"/>
+          <include name="SqForthAnswerGameBvMult5"/>
+          <include name="startBrowser"/>
+          <include name="FqForthAnswerGameBvMult5"/>
+          <include name="SqThirdAnswerGameBvMult5"/>
+          <include name="FqThirdAnswerGameBvMult5"/>
+          <include name="SqFirstAnswerGameBvMult5"/>
+          <include name="ThirdQuestionGameBvMult5"/>
+          <include name="SqSecondAnswerGameBvMult5"/>
+        </methods>
+      </class> <!-- com.triviagame.TestCases.BoundryValuesTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
