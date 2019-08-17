@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="59" total="60" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14223" started-at="2019-08-16T18:59:10Z" finished-at="2019-08-16T18:59:24Z">
+  <suite name="Default suite" duration-ms="28270" started-at="2019-08-17T08:24:23Z" finished-at="2019-08-17T08:24:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14223" started-at="2019-08-16T18:59:10Z" finished-at="2019-08-16T18:59:24Z">
-      <class name="com.triviagame.TestCases.BoundryValuesTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:com.triviagame.TestCases.BoundryValuesTest@42dafa95]" name="startBrowser" is-config="true" duration-ms="12731" started-at="2019-08-16T18:59:10Z" finished-at="2019-08-16T18:59:23Z">
+    <test name="Default test" duration-ms="28270" started-at="2019-08-17T08:24:23Z" finished-at="2019-08-17T08:24:52Z">
+      <class name="com.triviagame.TestCases.SanityOfGamePlay">
+        <test-method status="PASS" signature="ChromeGameSanity()[pri:0, instance:com.triviagame.TestCases.SanityOfGamePlay@754ba872]" name="ChromeGameSanity" duration-ms="15532" started-at="2019-08-17T08:24:23Z" finished-at="2019-08-17T08:24:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="FqFirstQuestionGameBvMult5()[pri:0, instance:com.triviagame.TestCases.BoundryValuesTest@42dafa95]" name="FqFirstQuestionGameBvMult5" duration-ms="799" started-at="2019-08-16T18:59:23Z" finished-at="2019-08-16T18:59:23Z">
+        </test-method> <!-- ChromeGameSanity -->
+        <test-method status="PASS" signature="FirefoxGameSanity()[pri:0, instance:com.triviagame.TestCases.SanityOfGamePlay@754ba872]" name="FirefoxGameSanity" duration-ms="12702" started-at="2019-08-17T08:24:39Z" finished-at="2019-08-17T08:24:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FqFirstQuestionGameBvMult5 -->
-        <test-method status="PASS" signature="afretAllTest()[pri:0, instance:com.triviagame.TestCases.BoundryValuesTest@42dafa95]" name="afretAllTest" is-config="true" duration-ms="660" started-at="2019-08-16T18:59:23Z" finished-at="2019-08-16T18:59:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afretAllTest -->
-      </class> <!-- com.triviagame.TestCases.BoundryValuesTest -->
+        </test-method> <!-- FirefoxGameSanity -->
+      </class> <!-- com.triviagame.TestCases.SanityOfGamePlay -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

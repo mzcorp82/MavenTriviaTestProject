@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\kc909\AppData\Local\Temp\testng-eclipse--1670003460\testng-customsuite.xml</span>
+                    <span>C:\Users\kc909\AppData\Local\Temp\testng-eclipse-858438572\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.triviagame.TestCases.BoundryValuesTest" hash-for-method="FqFirstQuestionGameBvMult5">FqFirstQuestionGameBvMult5</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.triviagame.TestCases.SanityOfGamePlay" hash-for-method="ChromeGameSanity">ChromeGameSanity</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.triviagame.TestCases.SanityOfGamePlay" hash-for-method="FirefoxGameSanity">FirefoxGameSanity</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +125,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.triviagame.TestCases.BoundryValuesTest</span>
+              <span class="class-name">com.triviagame.TestCases.SanityOfGamePlay</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="FqFirstQuestionGameBvMult5">
-                  </a> <!-- FqFirstQuestionGameBvMult5 -->
-                  <span class="method-name">FqFirstQuestionGameBvMult5</span>
+                  <a name="ChromeGameSanity">
+                  </a> <!-- ChromeGameSanity -->
+                  <span class="method-name">ChromeGameSanity</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="FirefoxGameSanity">
+                  </a> <!-- FirefoxGameSanity -->
+                  <span class="method-name">FirefoxGameSanity</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +147,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kc909\AppData\Local\Temp\testng-eclipse--1670003460\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kc909\AppData\Local\Temp\testng-eclipse-858438572\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +156,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.triviagame.TestCases.BoundryValuesTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;FqFirstQuestionGameBvMult5&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.triviagame.TestCases.BoundryValuesTest --&gt;
+      &lt;class name=&quot;com.triviagame.TestCases.SanityOfGamePlay&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -188,16 +196,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'FqFirstQuestionGameBvMult5')
-data.setCell(0, 2, 'com.triviagame.TestCases.BoundryValuesTest')
-data.setCell(0, 3, 799);
+data.setCell(0, 1, 'ChromeGameSanity')
+data.setCell(0, 2, 'com.triviagame.TestCases.SanityOfGamePlay')
+data.setCell(0, 3, 15532);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'FirefoxGameSanity')
+data.setCell(1, 2, 'com.triviagame.TestCases.SanityOfGamePlay')
+data.setCell(1, 3, 12702);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 799 ms</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,132 +224,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">59 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.triviagame.TestCases.BoundryValuesTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">SqForthAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">FqForthAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdQuestionGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqThirdAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondQuestionGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">TqFirstAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">FqThirdAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstQuestionGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">FqForthAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">FqSecondAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstQuestionGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdQuestionGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">SqThirdAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondQuestionGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">SqFirstAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqThirdAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqSecondAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqFirstAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqForthAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">FqThirdAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">TqFirstAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">SqFirstAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">FqSecondAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondQuestionGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdQuestionGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqForthAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">SqForthAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqSecondAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">TqForthAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondQuestionGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqSecondAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">SqThirdAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqForthAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqForthAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">TqForthAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdQuestionGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">TqThirdAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">FqSecondAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqFirstAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">SqForthAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqSecondAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">TqSecondAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">FqThirdAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">TqFirstAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqThirdAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">TqForthAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstAnswerGameBvMult5</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstAnswerGameBvMult20</span>
-                <br/>
-                <span class="ignored-method-name">SqFirstAnswerGameBvMult40</span>
-                <br/>
-                <span class="ignored-method-name">FqSecondAnswerGameBvMult10</span>
-                <br/>
-                <span class="ignored-method-name">FqFirstQuestionGameBvMult40</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -346,19 +235,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.triviagame.TestCases.BoundryValuesTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">startBrowser</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="chronological-class-name">com.triviagame.TestCases.SanityOfGamePlay</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">FqFirstQuestionGameBvMult5</span>
-                <span class="method-start">12731 ms</span>
+                <span class="method-name">ChromeGameSanity</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afretAllTest</span>
-                <span class="method-start">13532 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">FirefoxGameSanity</span>
+                <span class="method-start">15536 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
