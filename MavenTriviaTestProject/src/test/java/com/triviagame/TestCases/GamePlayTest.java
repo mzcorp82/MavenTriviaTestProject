@@ -1251,60 +1251,27 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
+
 		GB.clickStartButton();
 		QnA.typeTheQuestion("a");
 		GB.clickNextButton();
-		QnA.typeFirstAnswer("a");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("d");
-		QnA.clickFirstRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
-
-		TriviaQuestion.TriviaQuestion(Cdriver, "a");
-		Cdriver.findElement(By.id("nextquest")).click();
-
-		if(Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true) {
-
-			TriviaAnswers.TriviaAnswers(Cdriver, "a", "b", "c", "d");
-			AnswerRadioButton.RadioButton(Cdriver, 1);
-			Cdriver.findElement(By.id("nextquest")).click();
-			if(Cdriver.getPageSource().contains("question number: 2")==true) {
-				TriviaQuestion.TriviaQuestion(Cdriver, "b");
-				Cdriver.findElement(By.id("nextquest")).click();
-
-				Cdriver.findElement(By.id("backquest")).click();
-				if(Cdriver.getPageSource().contains("Please type here your question")==true) {
-					Cdriver.findElement(By.id("backquest")).click();
-					if(Cdriver.getPageSource().contains("question number: 1")==true) {
-
-						assertEquals(true, (Cdriver.getPageSource().contains("question number: 1")==true));
-
+		if(driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true) {
+			QnA.typeFirstAnswer("a");
+			QnA.typeSecondAnswer("b");
+			QnA.typeThirdAnswer("c");
+			QnA.typeForthAnswer("d");
+			QnA.clickFirstRadioButton();
+			GB.clickNextButton();
+			if(driver.getPageSource().contains("question number: 2")==true) {
+				QnA.typeTheQuestion("b");
+				GB.clickNextButton();
+				GB.clickBackButton();
+				if(driver.getPageSource().contains("Please type here your question")==true) {
+					GB.clickBackButton();
+					if(driver.getPageSource().contains("question number: 1")==true) {
+						assertEquals(true, (driver.getPageSource().contains("question number: 1")==true));
 						System.out.println("The test for first QnA passed");
-						Cdriver.quit();
+						driver.quit();
 					}
 				}				
 			}
@@ -1317,26 +1284,7 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
-		GB.clickStartButton();
-		QnA.typeTheQuestion("a");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("a");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("d");
-		QnA.clickFirstRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
+
 		QnA.typeFirstAnswer("w");
 		QnA.typeSecondAnswer("j");
 		QnA.typeThirdAnswer("c");
@@ -1350,27 +1298,33 @@ public class GamePlayTest extends TestBase{
 		GB.clickGameNextButton();
 		IGC.forQthreeClickOnFirstRadioButton();
 		
-		TriviaQuestion.TriviaQuestion(Cdriver, "a");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "a", "b", "c", "d");
-		AnswerRadioButton.RadioButton(Cdriver, 1);
-		Cdriver.findElement(By.id("nextquest")).click();
-		if(Cdriver.getPageSource().contains("question number: 2")==true) {
-			TriviaQuestion.TriviaQuestion(Cdriver, "b");
-			Cdriver.findElement(By.id("nextquest")).click();
-			if(Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true) {
-				TriviaAnswers.TriviaAnswers(Cdriver, "e", "b", "g", "y");
-				AnswerRadioButton.RadioButton(Cdriver, 2);
-				Cdriver.findElement(By.id("nextquest")).click();
-				if(Cdriver.getPageSource().contains("question number: 3")==true) {
-					TriviaQuestion.TriviaQuestion(Cdriver, "c");
-					Cdriver.findElement(By.id("backquest")).click();
-					if(Cdriver.getPageSource().contains("question number: 2")==true) {
-
-						assertEquals(true, (Cdriver.getPageSource().contains("question number: 2")==true));
-
+		GB.clickStartButton();
+		QnA.typeTheQuestion("a");
+		GB.clickNextButton();
+		QnA.typeFirstAnswer("a");
+		QnA.typeSecondAnswer("b");
+		QnA.typeThirdAnswer("c");
+		QnA.typeForthAnswer("d");
+		QnA.clickFirstRadioButton();
+		GB.clickNextButton();
+		
+		if(driver.getPageSource().contains("question number: 2")==true) {
+			QnA.typeTheQuestion("b");
+			GB.clickNextButton();
+			if(driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true) {
+				QnA.typeFirstAnswer("g");
+				QnA.typeSecondAnswer("b");
+				QnA.typeThirdAnswer("r");
+				QnA.typeForthAnswer("u");
+				QnA.clickSecondRadioButton();
+				GB.clickNextButton();
+				if(driver.getPageSource().contains("question number: 3")==true) {
+					QnA.typeTheQuestion("c");
+					GB.clickNextButton();
+					if(driver.getPageSource().contains("question number: 2")==true) {
+						assertEquals(true, (driver.getPageSource().contains("question number: 2")==true));
 						System.out.println("The test for second QnA passed");
-						Cdriver.quit();
+						driver.quit();
 					}
 					System.out.println("The test for second QnA has failed");
 				}
@@ -1385,42 +1339,11 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
-		GB.clickStartButton();
-		QnA.typeTheQuestion("a");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("a");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("d");
-		QnA.clickFirstRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
 
-		TriviaQuestion.TriviaQuestion(Cdriver, "4");
-		Cdriver.findElement(By.id("nextquest")).click();
-		assertEquals(true, (Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
+		GB.clickStartButton();
+		QnA.typeTheQuestion("4");
+		GB.clickNextButton();
+		assertEquals(true, (driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
 	}
 
 	@Test
@@ -1429,42 +1352,11 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
-		GB.clickStartButton();
-		QnA.typeTheQuestion("a");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("a");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("d");
-		QnA.clickFirstRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
 
-		TriviaQuestion.TriviaQuestion(Cdriver, "א");
-		Cdriver.findElement(By.id("nextquest")).click();
-		assertEquals(true, (Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
+		GB.clickStartButton();
+		QnA.typeTheQuestion("א");
+		GB.clickNextButton();
+		assertEquals(true, (driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
 	}
 
 	@Test
@@ -1473,7 +1365,7 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
+
 		GB.clickStartButton();
 		QnA.typeTheQuestion("a");
 		GB.clickNextButton();
@@ -1483,37 +1375,10 @@ public class GamePlayTest extends TestBase{
 		QnA.typeForthAnswer("d");
 		QnA.clickFirstRadioButton();
 		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
+		QnA.typeTheQuestion("6");
 		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
 
-		TriviaQuestion.TriviaQuestion(Cdriver, "a");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "a", "b", "c", "d");
-		AnswerRadioButton.RadioButton(Cdriver, 1);
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaQuestion.TriviaQuestion(Cdriver, "6");
-		Cdriver.findElement(By.id("nextquest")).click();
-		assertEquals(true, (Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
+		assertEquals(true, (driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
 	}
 
 	@Test
@@ -1522,7 +1387,7 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
+
 		GB.clickStartButton();
 		QnA.typeTheQuestion("a");
 		GB.clickNextButton();
@@ -1532,37 +1397,10 @@ public class GamePlayTest extends TestBase{
 		QnA.typeForthAnswer("d");
 		QnA.clickFirstRadioButton();
 		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
+		QnA.typeTheQuestion("ט");
 		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
-
-		TriviaQuestion.TriviaQuestion(Cdriver, "a");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "a", "b", "c", "d");
-		AnswerRadioButton.RadioButton(Cdriver, 1);
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaQuestion.TriviaQuestion(Cdriver, "ח");
-		Cdriver.findElement(By.id("nextquest")).click();
-		assertEquals(true, (Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
+		
+		assertEquals(true, (driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
 	}
 
 	@Test
@@ -1572,6 +1410,20 @@ public class GamePlayTest extends TestBase{
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
 		
+		
+		QnA.typeFirstAnswer("w");
+		QnA.typeSecondAnswer("j");
+		QnA.typeThirdAnswer("c");
+		QnA.typeForthAnswer("q");
+		QnA.clickThirdRadioButton();
+		GB.clickNextButton();
+		GB.clickPlayButton();
+		IGC.forQoneClickOnThirdRadioButton();
+		GB.clickGameNextButton();
+		IGC.forQtwoClickOnSecondRadioButton();
+		GB.clickGameNextButton();
+		IGC.forQthreeClickOnFirstRadioButton();
+		
 		GB.clickStartButton();
 		QnA.typeTheQuestion("a");
 		GB.clickNextButton();
@@ -1589,34 +1441,10 @@ public class GamePlayTest extends TestBase{
 		QnA.typeForthAnswer("u");
 		QnA.clickSecondRadioButton();
 		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
+		QnA.typeTheQuestion("9");
 		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
 
-		TriviaQuestion.TriviaQuestion(Cdriver, "a");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "a", "b", "c", "d");
-		AnswerRadioButton.RadioButton(Cdriver, 1);
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaQuestion.TriviaQuestion(Cdriver, "b");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "e", "b", "g", "y");
-		AnswerRadioButton.RadioButton(Cdriver, 2);
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaQuestion.TriviaQuestion(Cdriver, "9");
-		Cdriver.findElement(By.id("nextquest")).click();
-		assertEquals(true, (Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
+		assertEquals(true, (driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
 
 	}
 
@@ -1626,7 +1454,7 @@ public class GamePlayTest extends TestBase{
 		QnA = new QuestionsAndAnswers (driver);
 		GB = new GameButtons(driver);
 		IGC = new InGameChoices(driver);
-		
+
 		GB.clickStartButton();
 		QnA.typeTheQuestion("a");
 		GB.clickNextButton();
@@ -1644,96 +1472,13 @@ public class GamePlayTest extends TestBase{
 		QnA.typeForthAnswer("u");
 		QnA.clickSecondRadioButton();
 		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
+		QnA.typeTheQuestion("ט");
 		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
-
-		TriviaQuestion.TriviaQuestion(Cdriver, "a");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "a", "b", "c", "d");
-		AnswerRadioButton.RadioButton(Cdriver, 1);
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaQuestion.TriviaQuestion(Cdriver, "b");
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaAnswers.TriviaAnswers(Cdriver, "e", "b", "g", "y");
-		AnswerRadioButton.RadioButton(Cdriver, 2);
-		Cdriver.findElement(By.id("nextquest")).click();
-		TriviaQuestion.TriviaQuestion(Cdriver, "ט");
-		Cdriver.findElement(By.id("nextquest")).click();
-		assertEquals(true, (Cdriver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
+		
+		assertEquals(true, (driver.getPageSource().contains("Please enter 4 possible answers and Mark the right one")==true));
 
 	}
 
-	//Integration
-	@Test
-	void FacebookIntegration() {
-		
-		QnA = new QuestionsAndAnswers (driver);
-		GB = new GameButtons(driver);
-		IGC = new InGameChoices(driver);
-		
-		GB.clickStartButton();
-		QnA.typeTheQuestion("a");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("a");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("d");
-		QnA.clickFirstRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("b");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("g");
-		QnA.typeSecondAnswer("b");
-		QnA.typeThirdAnswer("r");
-		QnA.typeForthAnswer("u");
-		QnA.clickSecondRadioButton();
-		GB.clickNextButton();
-		QnA.typeTheQuestion("c");
-		GB.clickNextButton();
-		QnA.typeFirstAnswer("w");
-		QnA.typeSecondAnswer("j");
-		QnA.typeThirdAnswer("c");
-		QnA.typeForthAnswer("q");
-		QnA.clickThirdRadioButton();
-		GB.clickNextButton();
-		GB.clickPlayButton();
-		IGC.forQoneClickOnThirdRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQtwoClickOnSecondRadioButton();
-		GB.clickGameNextButton();
-		IGC.forQthreeClickOnFirstRadioButton();
-
-		QnAone.QnAone(Cdriver, "a", "a","b","c","d");
-		AnswerRadioButton.RadioButton(Cdriver, 1);
-		QnAtwo.QnAtwo(Cdriver,"b","g","b","r","u");
-		AnswerRadioButton.RadioButton(Cdriver, 2);
-		QnAthree.QnAthree(Cdriver,"c","w","j","c","q");
-		AnswerRadioButton.RadioButton(Cdriver, 3);
-		GameFrstRound.GameFrstRound(Cdriver);
-		GameSecondRound.GameSecondRound(Cdriver);
-		GameThirdRound.GameThirdRound(Cdriver);
-
-		Cdriver.findElement(By.id("fackBook2")).click();
-		Alert alert = Cdriver.switchTo().alert();
-		alert.accept();
-
-		assertEquals(true, Cdriver.getPageSource().contains("facebook")==true);
-
-	}
-
-	
 }
 
 
