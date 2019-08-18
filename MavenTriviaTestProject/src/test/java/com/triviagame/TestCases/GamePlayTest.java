@@ -1197,7 +1197,7 @@ public class GamePlayTest extends TestBase{
 		IGC.forQthreeClickOnFirstRadioButton();
 		GB.clickGameNextButton();
 		
-		assertEquals(true, Cdriver.getPageSource().contains("Failed")==true);
+		assertEquals(true, driver.getPageSource().contains("Failed")==true);
 
 	}
 
